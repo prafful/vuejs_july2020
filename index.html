@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vueapp">
+        <h3>{{ welcome('tricky') }}</h3>
+        Hello! from {{name}}<br>
+        Location: {{ location}} <br>
+        Website: <a v-bind:href="homepage">Vue.JS</a>  <br>
+        Other website: <a :href="homepage">Vue.JS</a>  <br>
+        Name: <input type="text" v-bind:value="name">  <br>
+        Website HTML: <span v-html="websitehtml"></span> 
+
+    </div>
+    <hr>
+    <div id="myapp">
+        Name: Hello! from {{name}}
+
+    </div>
+
+    <script src="myapp.js"></script>
+</body>
+
+</html>
