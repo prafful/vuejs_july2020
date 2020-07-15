@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="02style.css">
+
+</head>
+<body>
+    <div id="vue-app">
+        <button v-on:click.once="increment(1)">+</button>
+        <button v-on:click.alt="decrement(1)">-</button>
+        <p>Score: {{ score }}</p>
+        <br>
+        <button v-on:dblclick="increment(2)">+</button>
+        <button v-on:dblclick="decrement(2)">-</button>
+        <a v-on:click.prevent="check"  href="https://vuejs.org/v2/guide/events.html">Vue.JS</a>
+        <br>
+        <div id="area" v-on:mousemove="updateCoordinate">{{ x }}, {{ y }}</div>
+    </div>
+
+    <script src="03vue_event_modifier.js"></script>
+</body>
+</html>

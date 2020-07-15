@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vueapp">
+       Name: <input v-on:keyup="getName" type="text" v-model="name"> {{ name  }} <br>
+       score: <input v-on:keyup="getScore" type="text" v-model="score"> {{ score }}
+       <hr>
+        <button v-on:click="addToScoreA">Score A  {{ scoreA }}</button>
+        <br>
+        <button v-on:click="addToScoreB">Score B {{ scoreB }}</button>
+
+
+    </div>
+    <hr>
+    
+    <script src="05vue_twowaydatabinding.js"></script>
+</body>
+
+</html>

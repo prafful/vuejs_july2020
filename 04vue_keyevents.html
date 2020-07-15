@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vueapp">
+       Name: <input v-on:keyup.alt.enter="getName" type="text"> <br>
+       score: <input v-on:keyup.enter="getScore" type="text">
+    </div>
+    <hr>
+    
+    <script src="04vue_keyevents.js"></script>
+</body>
+
+</html>
