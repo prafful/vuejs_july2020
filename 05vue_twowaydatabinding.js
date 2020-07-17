@@ -16,11 +16,12 @@ new Vue({
         },
         addToScoreA: function(){
             console.log("scoreA")
-            this.scoreA+=this.score
+            return this.scoreA+=this.score
         },
         addToScoreB: function(){
             console.log("scoreB")
-            this.scoreB+=this.score
+            return this.scoreB+=this.score
         }
-    }
+    },
+    computed:{}
 })

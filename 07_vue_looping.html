@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vueapp">
+        <ol>
+            <li v-for="friend in friends"> {{ friend }}</li>
+        </ol>
+        <ul>
+            <li v-for="fd in details"> {{ fd.id }}: {{fd.name}} from  {{fd.location}}</li>
+        </ul>
+        <ol>
+            <li v-for="(fd, index) in details"> Index:{{index}} - {{ fd.id }}: {{fd.name}} from  {{fd.location}}</li>
+        </ol>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Index</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(fd, index) in details">
+                    <td> {{fd.id}} </td>
+                    <td> {{fd.name}} </td>
+                    <td> {{fd.location}} </td>
+                    <td> {{index}} </td>
+                    <td>
+                        <button v-on:click="getMe(index)">Click</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="07_vue_looping.js"></script>
+</body>
+
+</html>
